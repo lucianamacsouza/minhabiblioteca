@@ -1,0 +1,22 @@
+<h3 class="mt-4 mx-5">Pesquise os proprietários cadastrados</h3>
+<div class="container" style="min-height: 100px;">
+<div class="row">
+<div class="col">
+  <form [formGroup]="formProprietario" (ngSubmit)="onSubmit()" class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="nomeProprietario" class="sr-only">Nome</label>
+      <input type="text" formControlName="nome" class="form-control" id="nomeProprietario" placeholder="Informe o nome">
+    </div>   
+    <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+  </form>
+</div>
+</div>
+</div>  
+
+
+<div class="mx-5 mb-5">
+  <cadastro-proprietarios 
+       [(proprietarios)]="listaProprietarios" 
+       [(existeProps)]="existeProps">
+  </cadastro-proprietarios>  
+</div>
